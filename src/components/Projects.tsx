@@ -70,16 +70,14 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="project-card"
             >
-              <div className="project-media">
-                <div className="relative w-full h-48 bg-slate-100 dark:bg-slate-800/50 rounded-lg overflow-hidden">
-                  <Image
-                    src={project.preview}
-                    alt={`${project.title} preview`}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    className="transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
+              <div className="project-media relative bg-slate-100 dark:bg-slate-800">
+                <Image
+                  src={project.preview}
+                  alt={`${project.title} preview`}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className="transition-transform duration-300 hover:scale-105"
+                />
                 <span className="project-index">0{index + 1}</span>
                 <span className="project-ribbon">{project.focus}</span>
               </div>
