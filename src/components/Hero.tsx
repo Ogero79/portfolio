@@ -91,7 +91,13 @@ const Hero = () => {
           >
             <div className="glow-ring hero-ring">
               <div className="hero-avatar">
-                <Image src="/og-image.jpg" alt="Brian Ogero" width={400} height={400} priority />
+                <Image 
+                  src="/og-image.jpg" 
+                  alt="Brian Ogero" 
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  priority 
+                />
               </div>
             </div>
 

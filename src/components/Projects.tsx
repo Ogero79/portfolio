@@ -12,7 +12,7 @@ const featuredWork = [
     outcome: 'Comprehensive learning management system with intuitive interface for students and educators.',
     tags: ['React', 'JavaScript', 'CSS', 'Node.js'],
     github: 'https://github.com/Ogero79/eduhub-front',
-    live: 'https://eduhub.netlify.app',
+    live: 'https://eduhub-kabu.netlify.app',
   },
   {
     title: 'iFund Crowdfunding Platform',
@@ -21,7 +21,7 @@ const featuredWork = [
     outcome: 'Secure platform connecting fundraisers with supporters, featuring responsive design and payment integration.',
     tags: ['React', 'JavaScript', 'Node.js', 'CSS'],
     github: 'https://github.com/Ogero79/ifund-frontend',
-    live: 'https://ifundapp.netlify.com',
+    live: 'https://ifundapp.netlify.app',
   },
   {
     title: 'Jala Educators Platform',
@@ -30,7 +30,7 @@ const featuredWork = [
     outcome: 'Streamlined platform for educators with type-safe architecture and excellent performance.',
     tags: ['TypeScript', 'Next.js', 'HTML', 'Node.js'],
     github: '#',
-    live: 'https://jalaeducators.netlify.com',
+    live: 'https://jalaeducators.netlify.app',
   },
   {
     title: 'Professional Portfolio Showcase',
@@ -39,7 +39,7 @@ const featuredWork = [
     outcome: 'Fast-loading, type-safe portfolio with excellent user experience and professional presentation.',
     tags: ['TypeScript', 'Next.js', 'HTML', 'CSS'],
     github: 'https://github.com/Ogero79/terry-portfolio-website',
-    live: 'https://terrymasese.netlify.com',
+    live: 'https://terrymasese.netlify.app',
   },
 ];
 
