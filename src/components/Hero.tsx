@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { HiArrowDown, HiSparkles } from 'react-icons/hi';
 import { FaArrowRight, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FiDownload, FiMail } from 'react-icons/fi';
@@ -91,12 +90,15 @@ const Hero = () => {
           >
             <div className="glow-ring hero-ring">
               <div className="hero-avatar">
-                <Image 
+                <img 
                   src="/og-image.jpg" 
-                  alt="Brian Ogero" 
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  priority 
+                  alt="Brian Ogero"
+                  loading="eager"
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover' 
+                  }}
                 />
               </div>
             </div>
