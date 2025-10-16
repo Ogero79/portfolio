@@ -9,9 +9,9 @@ const Contact: React.FC = () => {
       <div className="page-shell">
         <div className="section-heading">
           <span className="section-label">Get in touch</span>
-          <h2 className="section-title">Let's build something great together</h2>
+          <h2 className="section-title">Let&apos;s build something great together</h2>
           <p className="section-subtitle">
-            Looking for a developer who combines technical skills with design thinking? I'm available for freelance projects and full-time opportunities.
+            Looking for a developer who combines technical skills with design thinking? I&apos;m available for freelance projects and full-time opportunities.
           </p>
         </div>
 
