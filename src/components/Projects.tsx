@@ -14,7 +14,7 @@ const featuredWork = [
     tags: ['React', 'JavaScript', 'CSS', 'Node.js'],
     github: 'https://github.com/Ogero79/eduhub-front',
     live: 'https://eduhub-kabu.netlify.app',
-    preview: `https://api.apiflash.com/v1/urltoimage?access_key=demo&url=${encodeURIComponent('https://eduhub-kabu.netlify.app')}&format=jpeg&width=800&height=600`,
+    preview: `https://api.apiflash.com/v1/urltoimage?access_key=38a2e50cadb5419d9426c2b552ade8ec&url=${encodeURIComponent('https://eduhub-kabu.netlify.app')}&format=jpeg&width=800&height=600`,
   },
   {
     title: 'iFund Crowdfunding Platform',
@@ -24,7 +24,7 @@ const featuredWork = [
     tags: ['React', 'JavaScript', 'Node.js', 'CSS'],
     github: 'https://github.com/Ogero79/ifund-frontend',
     live: 'https://ifundapp.netlify.app',
-    preview: `https://api.apiflash.com/v1/urltoimage?access_key=demo&url=${encodeURIComponent('https://ifundapp.netlify.app')}&format=jpeg&width=800&height=600`,
+    preview: `https://api.apiflash.com/v1/urltoimage?access_key=38a2e50cadb5419d9426c2b552ade8ec&url=${encodeURIComponent('https://ifundapp.netlify.app')}&format=jpeg&width=800&height=600`,
   },
   {
     title: 'Jala Educators Platform',
@@ -34,7 +34,7 @@ const featuredWork = [
     tags: ['TypeScript', 'Next.js', 'HTML', 'Node.js'],
     github: '#',
     live: 'https://jalaeducators.netlify.app',
-    preview: `https://api.apiflash.com/v1/urltoimage?access_key=demo&url=${encodeURIComponent('https://jalaeducators.netlify.app')}&format=jpeg&width=800&height=600`,
+    preview: `https://api.apiflash.com/v1/urltoimage?access_key=38a2e50cadb5419d9426c2b552ade8ec&url=${encodeURIComponent('https://jalaeducators.netlify.app')}&format=jpeg&width=800&height=600`,
   },
   {
     title: 'Professional Portfolio Showcase',
@@ -44,7 +44,7 @@ const featuredWork = [
     tags: ['TypeScript', 'Next.js', 'HTML', 'CSS'],
     github: 'https://github.com/Ogero79/terry-portfolio-website',
     live: 'https://terrymasese.netlify.app',
-    preview: `https://api.apiflash.com/v1/urltoimage?access_key=demo&url=${encodeURIComponent('https://terrymasese.netlify.app')}&format=jpeg&width=800&height=600`,
+    preview: `https://api.apiflash.com/v1/urltoimage?access_key=38a2e50cadb5419d9426c2b552ade8ec&url=${encodeURIComponent('https://terrymasese.netlify.app')}&format=jpeg&width=800&height=600`,
   },
 ];
 
