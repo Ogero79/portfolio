@@ -180,8 +180,8 @@ Contributions, issues, and feature requests are welcome!
 ## 👤 Author
 
 **Brian**
-- Portfolio: [brianportfolio.com](https://brianportfolio.com)
-- GitHub: [@yourusername](https://github.com/yourusername)
+- Portfolio: [ogero.dev](https://ogero.dev)
+- GitHub: [@Ogero79](https://github.com/Ogero79)
 - LinkedIn: [Your Name](https://linkedin.com/in/yourname)
 
 ## 🙏 Acknowledgments
