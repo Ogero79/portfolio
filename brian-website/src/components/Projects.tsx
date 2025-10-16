@@ -63,8 +63,8 @@ const Projects = () => {
 
               <div className="project-content">
                 <div className="tag-badge">Project</div>
-                <h3>{project.title}</h3>
-                <p className="project-description">{project.description}</p>
+                <h3 className="text-slate-900 dark:text-slate-100">{project.title}</h3>
+                <p className="project-description text-slate-600 dark:text-slate-300">{project.description}</p>
 
                 <div className="project-meta">
                   {project.tags.map((tag) => (

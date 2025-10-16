@@ -12,9 +12,9 @@ const About = () => {
 
   const experiences = [
     {
-      role: 'Computer Science Student · Kabarak University',
+      role: 'Computer Security & Forensics Student · Kabarak University',
       period: '2022 — Present',
-      summary: 'Pursuing BSc in Computer Science while building real-world applications.',
+      summary: 'Pursuing BSc in Computer Security and Forensics while building secure applications.',
     },
     {
       role: 'Full-Stack Developer · Freelance',
@@ -51,9 +51,9 @@ const About = () => {
       <div className="page-shell">
         <div className="section-heading">
           <span className="section-label">About</span>
-          <h2 className="section-title">Full-Stack Developer with a passion for great UX</h2>
+          <h2 className="section-title">Full-Stack Developer & Security Enthusiast</h2>
           <p className="section-subtitle">
-            I build complete web applications from concept to deployment, combining technical skills with design thinking to create solutions that users love.
+            I build secure web applications from concept to deployment, combining technical skills with security best practices and design thinking.
           </p>
         </div>
 
@@ -66,10 +66,10 @@ const About = () => {
             className="about-story"
           >
             <p>
-              I am a computer science student and full-stack developer specializing in building modern web applications. My approach combines solid programming fundamentals with user-centered design principles to create intuitive, responsive experiences.
+              I am a Computer Security and Forensics student and full-stack developer specializing in building secure, modern web applications. My approach combines solid programming fundamentals with security awareness and user-centered design principles.
             </p>
             <p>
-              With expertise spanning React, Next.js, Node.js, and Python, I enjoy tackling challenging problems and learning new technologies. I also have a strong foundation in UX/UI design, allowing me to bridge the gap between development and design effectively.
+              With expertise spanning React, Next.js, Node.js, and Python, I enjoy tackling challenging problems and learning new technologies. My background in security and forensics informs my development practices, ensuring applications are both functional and secure.
             </p>
 
             <div className="principles-grid">

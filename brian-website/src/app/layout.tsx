@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,16 +19,44 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://brianportfolio.com'),
+  metadataBase: new URL('https://ogero.dev'),
   title: {
-    default: "Brian - Full Stack Developer Portfolio",
-    template: "%s | Brian Portfolio",
+    default: "Brian Ogero - Full Stack Developer & Security Enthusiast",
+    template: "%s | Brian Ogero",
   },
-  description: "Full Stack Developer specializing in React, Next.js, TypeScript, and modern web technologies. View my projects and get in touch for collaboration.",
-  keywords: ["Full Stack Developer", "Web Developer", "React", "Next.js", "TypeScript", "JavaScript", "Portfolio", "Brian"],
-  authors: [{ name: "Brian" }],
-  creator: "Brian",
-  publisher: "Brian",
+  description: "Brian Ogero - Full Stack Developer specializing in React, Next.js, TypeScript, and web security. Computer Security & Forensics student building secure, modern web applications.",
+  keywords: [
+    "Brian Ogero",
+    "ogero",
+    "ogero.dev",
+    "Full Stack Developer",
+    "Web Developer",
+    "Computer Security",
+    "Forensics",
+    "Kabarak University",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "Python Developer",
+    "Web Security",
+    "UX/UI Designer",
+    "Figma",
+    "Tailwind CSS",
+    "Frontend Developer",
+    "Backend Developer",
+    "Software Engineer",
+    "Web Applications",
+    "Responsive Design",
+    "Modern Web Development",
+    "Kenya Developer",
+    "Portfolio",
+    "Freelance Developer",
+  ],
+  authors: [{ name: "Brian Ogero" }],
+  creator: "Brian Ogero",
+  publisher: "Brian Ogero",
   formatDetection: {
     email: false,
     address: false,
@@ -38,24 +65,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://brianportfolio.com",
-    siteName: "Brian Portfolio",
-    title: "Brian - Full Stack Developer Portfolio",
-    description: "Full Stack Developer specializing in React, Next.js, TypeScript, and modern web technologies.",
+    url: "https://ogero.dev",
+    siteName: "Brian Ogero Portfolio",
+    title: "Brian Ogero - Full Stack Developer & Security Enthusiast",
+    description: "Full Stack Developer specializing in React, Next.js, TypeScript, and web security. Computer Security & Forensics student at Kabarak University.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Brian Portfolio",
+        alt: "Brian Ogero Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Brian - Full Stack Developer Portfolio",
-    description: "Full Stack Developer specializing in React, Next.js, TypeScript, and modern web technologies.",
-    creator: "@brian",
+    title: "Brian Ogero - Full Stack Developer & Security Enthusiast",
+    description: "Full Stack Developer specializing in React, Next.js, TypeScript, and web security.",
+    creator: "@ogeroofficial",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -81,7 +108,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -90,15 +117,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-3 py-2 rounded-md z-50"
         >
-          <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-3 py-2 rounded-md z-50">Skip to content</a>
-          <div id="main">{children}</div>
-        </ThemeProvider>
+          Skip to content
+        </a>
+        <div id="main">{children}</div>
       </body>
     </html>
   );

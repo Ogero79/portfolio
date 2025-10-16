@@ -12,18 +12,18 @@ const Footer = () => {
       <div className="page-shell">
         <div className="footer-grid">
           <div>
-            <h3 className="text-lg font-semibold gradient-text">Brian Ogero Studio</h3>
-            <p className="text-sm text-slate-400/80 mt-3 leading-relaxed">
-              Boutique engineering partner building expressive web products with incredible polish.
+            <h3 className="text-lg font-semibold gradient-text">Brian Ogero</h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400/80 mt-3 leading-relaxed">
+              Full-stack developer & security enthusiast building secure, modern web applications with clean code and great UX.
             </p>
           </div>
 
           <div>
-            <h4 className="text-sm uppercase tracking-widest text-slate-400/70">Navigate</h4>
+            <h4 className="text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400/70">Navigate</h4>
             <ul className="mt-3 space-y-2">
               {navLinks.map((link) => (
                 <li key={link}>
-                  <a href={`#${link.toLowerCase()}`} className="text-sm text-slate-300/85 hover:text-white transition-colors">
+                  <a href={`#${link.toLowerCase()}`} className="text-sm text-slate-600 dark:text-slate-300/85 hover:text-violet-600 dark:hover:text-white transition-colors">
                     {link}
                   </a>
                 </li>
@@ -32,17 +32,17 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-sm uppercase tracking-widest text-slate-400/70">Contact</h4>
-            <ul className="mt-3 space-y-2 text-sm text-slate-300/85">
+            <h4 className="text-sm uppercase tracking-widest text-slate-500 dark:text-slate-400/70">Contact</h4>
+            <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300/85">
               <li>brianogero@kabarak.ac.ke</li>
               <li>+254 759 776 864</li>
-              <li>Nairobi · Remote friendly</li>
+              <li>ogero.dev</li>
             </ul>
           </div>
         </div>
 
         <div className="footer-meta">
-          <span>© {currentYear} Crafted with curiosity and care.</span>
+          <span className="text-slate-600 dark:text-slate-400">© {currentYear} Brian Ogero. Built with Next.js & Tailwind CSS.</span>
           <div className="social-cluster">
             <a href="https://github.com/Ogero79" target="_blank" rel="noreferrer" className="social-pill" aria-label="GitHub">
               <FaGithub size={16} />

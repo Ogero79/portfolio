@@ -73,7 +73,7 @@ const Skills = () => {
               className="skill-card"
             >
               <span className="tag-badge">{capability.title}</span>
-              <p className="text-sm text-slate-300/80 mt-3">{capability.description}</p>
+              <p className="text-sm text-slate-600 dark:text-slate-300/80 mt-3">{capability.description}</p>
               <div className="skill-list">
                 {capability.highlights.map((highlight) => (
                   <span key={highlight} className="skill-chip">
@@ -92,26 +92,17 @@ const Skills = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-14"
         >
-          <div className="section-label" style={{ marginBottom: '1.25rem' }}>
+          <div className="section-label" style={{ marginBottom: '1.5rem' }}>
             Toolbelt
           </div>
-          <div className="tech-grid">
-            {toolbelt.map((tool, idx) => (
-              <motion.div
-                key={tool.name}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="tech-tile"
-              >
-                <span className="tech-icon">
-                  {React.createElement(tool.icon, { size: 20 })}
-                </span>
-                <strong className="text-sm">{tool.name}</strong>
-                <span className="text-xs text-slate-400/80">Production ready</span>
-              </motion.div>
-            ))}
+          <div className="tech-marquee-wrapper">
+            <div className="tech-marquee">
+              {[...toolbelt, ...toolbelt].map((tool, idx) => (
+                <div key={`${tool.name}-${idx}`} className="tech-icon-item">
+                  {React.createElement(tool.icon, { size: 32 })}
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>

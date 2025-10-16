@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import ThemeToggle from './ThemeToggle';
 
 const Navbar: React.FC = () => {
   const [mounted, setMounted] = useState(false);
@@ -85,9 +84,6 @@ const Navbar: React.FC = () => {
           ))}
         </div>
 
-        <div className="nav-meta">
-          <ThemeToggle />
-        </div>
       </motion.nav>
     </div>
   );

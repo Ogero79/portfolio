@@ -31,7 +31,7 @@ const Hero = () => {
             <h1>
               Building <span className="gradient-text">elegant web experiences</span> with modern technology
             </h1>
-            <p>
+            <p className="text-slate-600 dark:text-slate-300">
               I combine full-stack development expertise with UX/UI design skills to create responsive,
               user-friendly applications that solve real problems.
             </p>
@@ -42,10 +42,9 @@ const Hero = () => {
                 Start a project
               </a>
               <a
-                href="/Brian-Ogero-Resume.pdf"
+                href="/resume.pdf"
                 className="button-secondary"
-                target="_blank"
-                rel="noreferrer"
+                download
               >
                 <FiDownload size={18} />
                 Download resume
@@ -68,8 +67,8 @@ const Hero = () => {
                 },
               ].map((item) => (
                 <div key={item.title} className="outline-dashed">
-                  <strong className="text-sm text-white block mb-1">{item.title}</strong>
-                  <span>{item.detail}</span>
+                  <strong className="text-sm text-slate-800 dark:text-white block mb-1">{item.title}</strong>
+                  <span className="text-slate-600 dark:text-slate-400">{item.detail}</span>
                 </div>
               ))}
             </div>
@@ -77,8 +76,8 @@ const Hero = () => {
             <div className="signature-card">
               <HiSparkles size={22} />
               <div>
-                <strong className="block text-white">Computer Science Student & Developer</strong>
-                <span className="text-xs text-slate-300/80">Building practical solutions with clean code</span>
+                <strong className="block text-slate-900 dark:text-white">Computer Security & Forensics Student</strong>
+                <span className="text-xs text-slate-600 dark:text-slate-300/80">Building secure solutions with clean code</span>
               </div>
             </div>
           </motion.div>
@@ -91,12 +90,12 @@ const Hero = () => {
           >
             <div className="glow-ring hero-ring">
               <div className="hero-avatar">
-                <img src="/myimage.jpg" alt="Brian Ogero" />
+                <img src="/og-image.jpg" alt="Brian Ogero" />
               </div>
             </div>
 
             <div className="hero-floating-badge" style={{ bottom: '-8%', right: '-6%' }}>
-              <span className="text-slate-300/70 text-xs uppercase tracking-widest">Connect</span>
+              <span className="text-xs uppercase tracking-widest text-slate-600 dark:text-slate-300">Connect</span>
               <span className="flex items-center gap-2">
                 <a href="https://github.com/Ogero79" className="social-pill" aria-label="GitHub">
                   <FaGithub size={14} />

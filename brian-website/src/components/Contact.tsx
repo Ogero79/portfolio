@@ -28,10 +28,10 @@ const Contact: React.FC = () => {
                 <FiCalendar size={16} />
                 Available for freelance work & opportunities
               </div>
-              <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+              <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-slate-900 dark:text-slate-100">
                 Whether you need a full-stack developer or a UX-focused designer, I'm here to help bring your ideas to life.
               </h3>
-              <p className="text-slate-300/80 text-sm leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-300/80 text-sm leading-relaxed">
                 I'm passionate about creating clean, efficient code and delightful user experiences. Let's discuss your project and how I can contribute to its success.
               </p>
 
@@ -62,10 +62,10 @@ const Contact: React.FC = () => {
 
             <div className="glass-panel soft outline-accent p-6 rounded-3xl">
               <div className="flex items-center justify-between">
-                <div className="text-xs uppercase tracking-widest text-slate-400/80">What you get</div>
-                <FiArrowUpRight size={18} className="text-slate-400/80" />
+                <div className="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400/80">What you get</div>
+                <FiArrowUpRight size={18} className="text-slate-500 dark:text-slate-400/80" />
               </div>
-              <ul className="mt-5 space-y-4 text-sm text-slate-300/85">
+              <ul className="mt-5 space-y-4 text-sm text-slate-600 dark:text-slate-300/85">
                 {[
                   'Clean, maintainable code following best practices',
                   'Responsive designs that work across all devices',
