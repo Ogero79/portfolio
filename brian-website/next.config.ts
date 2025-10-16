@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   /* Performance optimizations */
   compress: true,
   
+  /* Output configuration for Netlify */
+  output: 'standalone',
+  
   /* Image optimization */
   images: {
     formats: ['image/avif', 'image/webp'],
