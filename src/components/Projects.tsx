@@ -6,31 +6,40 @@ import { HiOutlineTrendingUp } from 'react-icons/hi';
 
 const featuredWork = [
   {
-    title: 'E-Commerce Platform',
-    description: 'Full-featured online store with product management, shopping cart, secure checkout, and order tracking.',
-    focus: 'web application',
-    outcome: 'Complete shopping experience with responsive design and payment integration.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe API'],
-    github: 'https://github.com/Ogero79',
-    live: '#',
+    title: 'EduHub Learning Platform',
+    description: 'Educational hub with course management, student enrollment, and interactive learning modules for academic institutions.',
+    focus: 'education technology',
+    outcome: 'Comprehensive learning management system with intuitive interface for students and educators.',
+    tags: ['React', 'JavaScript', 'CSS', 'Node.js'],
+    github: 'https://github.com/Ogero79/eduhub-front',
+    live: 'https://eduhub.netlify.app',
   },
   {
-    title: 'Task Management App',
-    description: 'Collaborative task tracking application with real-time updates, team workspaces, and deadline notifications.',
-    focus: 'productivity tool',
-    outcome: 'Intuitive interface for managing projects and team collaboration.',
-    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Tailwind CSS'],
-    github: 'https://github.com/Ogero79',
-    live: '#',
+    title: 'iFund Crowdfunding Platform',
+    description: 'Full-stack crowdfunding application with campaign creation, donation processing, and real-time funding progress tracking.',
+    focus: 'fintech application',
+    outcome: 'Secure platform connecting fundraisers with supporters, featuring responsive design and payment integration.',
+    tags: ['React', 'JavaScript', 'Node.js', 'CSS'],
+    github: 'https://github.com/Ogero79/ifund-frontend',
+    live: 'https://ifundapp.netlify.com',
   },
   {
-    title: 'Portfolio Showcase',
-    description: 'Modern portfolio website with smooth animations, dark mode support, and optimized performance.',
+    title: 'Jala Educators Platform',
+    description: 'Modern educator management system with scheduling, resource sharing, and communication tools for educational professionals.',
+    focus: 'professional development',
+    outcome: 'Streamlined platform for educators with type-safe architecture and excellent performance.',
+    tags: ['TypeScript', 'Next.js', 'HTML', 'Node.js'],
+    github: '#',
+    live: 'https://jalaeducators.netlify.com',
+  },
+  {
+    title: 'Professional Portfolio Showcase',
+    description: 'Modern portfolio website with smooth animations, responsive design, and optimized performance for showcasing projects.',
     focus: 'web design',
-    outcome: 'Fast-loading, responsive design with excellent user experience.',
-    tags: ['Next.js', 'Framer Motion', 'Tailwind CSS', 'TypeScript'],
-    github: 'https://github.com/Ogero79',
-    live: '#',
+    outcome: 'Fast-loading, type-safe portfolio with excellent user experience and professional presentation.',
+    tags: ['TypeScript', 'Next.js', 'HTML', 'CSS'],
+    github: 'https://github.com/Ogero79/terry-portfolio-website',
+    live: 'https://terrymasese.netlify.com',
   },
 ];
 
@@ -87,15 +96,17 @@ const Projects = () => {
                     <FaExternalLinkAlt size={14} />
                     View product
                   </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="ghost-button"
-                  >
-                    <FaGithub size={16} />
-                    Repo
-                  </a>
+                  {project.github !== '#' && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="ghost-button"
+                    >
+                      <FaGithub size={16} />
+                      Repo
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.article>
