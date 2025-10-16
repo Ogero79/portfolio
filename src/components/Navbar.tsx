@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 
 const Navbar: React.FC = () => {
@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+  const sections = useMemo(() => ['home', 'about', 'skills', 'projects', 'contact'], []);
 
   useEffect(() => {
     setMounted(true);

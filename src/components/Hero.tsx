@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { HiArrowDown, HiSparkles } from 'react-icons/hi';
 import { FaArrowRight, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FiDownload, FiMail } from 'react-icons/fi';
@@ -90,7 +91,7 @@ const Hero = () => {
           >
             <div className="glow-ring hero-ring">
               <div className="hero-avatar">
-                <img src="/og-image.jpg" alt="Brian Ogero" />
+                <Image src="/og-image.jpg" alt="Brian Ogero" width={400} height={400} priority />
               </div>
             </div>
 

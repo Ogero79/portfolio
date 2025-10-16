@@ -29,10 +29,10 @@ const Contact: React.FC = () => {
                 Available for freelance work & opportunities
               </div>
               <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-slate-900 dark:text-slate-100">
-                Whether you need a full-stack developer or a UX-focused designer, I'm here to help bring your ideas to life.
+                Whether you need a full-stack developer or a UX-focused designer, I&apos;m here to help bring your ideas to life.
               </h3>
               <p className="text-slate-600 dark:text-slate-300/80 text-sm leading-relaxed">
-                I'm passionate about creating clean, efficient code and delightful user experiences. Let's discuss your project and how I can contribute to its success.
+                I&apos;m passionate about creating clean, efficient code and delightful user experiences. Let&apos;s discuss your project and how I can contribute to its success.
               </p>
 
               <div className="contact-actions">
