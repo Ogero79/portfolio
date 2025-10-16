@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/private/'],
     },
-    sitemap: 'https://brianportfolio.com/sitemap.xml',
+    sitemap: 'https://ogero.dev/sitemap.xml',
   }
 }
