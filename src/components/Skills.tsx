@@ -1,113 +1,59 @@
 'use client';
-
-import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  SiDocker,
-  SiFigma,
-  SiGit,
-  SiJavascript,
-  SiMongodb,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiPostgresql,
-  SiPython,
-  SiReact,
-  SiTailwindcss,
-  SiTypescript,
-} from 'react-icons/si';
 
-const capabilityStacks = [
-  {
-    title: 'Frontend Development',
-    description: 'Building responsive, interactive user interfaces with modern JavaScript frameworks and component libraries.',
-    highlights: ['React & Next.js applications', 'Responsive design with Tailwind CSS', 'State management and routing'],
-  },
-  {
-    title: 'Backend Development',
-    description: 'Creating robust server-side applications, RESTful APIs, and database integration.',
-    highlights: ['Node.js & Express APIs', 'Python for backend services', 'SQL & NoSQL databases'],
-  },
-  {
-    title: 'UX/UI Design',
-    description: 'Designing user-centered interfaces with focus on usability, accessibility, and visual appeal.',
-    highlights: ['Wireframing & prototyping in Figma', 'User research and testing', 'Design systems and consistency'],
-  },
+const skillCategories = [
+  { category: 'Frontend & App', items: ['Next.js', 'React Native', 'Tailwind CSS', 'Framer Motion', 'TypeScript', 'Redux', 'WebSockets'] },
+  { category: 'Backend & Data', items: ['Node.js', 'Python', 'Rust', 'PostgreSQL', 'GraphQL', 'Kafka', 'Redis'] },
+  { category: 'AI & Machine Learning', items: ['PyTorch', 'LangChain', 'LLM Integrations', 'RAG Pipelines', 'Vector Databases', 'Prompt Engineering'] },
+  { category: 'Cybersecurity', items: ['Zero-Trust Architecture', 'Penetration Testing', 'OAuth/OIDC', 'Cryptography', 'Cloud Security Posture Management'] },
+  { category: 'Cloud & DevOps', items: ['AWS', 'GCP', 'Docker', 'Kubernetes', 'CI/CD pipelines', 'Terraform'] },
 ];
 
-const toolbelt = [
-  { name: 'React', icon: SiReact },
-  { name: 'Next.js', icon: SiNextdotjs },
-  { name: 'TypeScript', icon: SiTypescript },
-  { name: 'JavaScript', icon: SiJavascript },
-  { name: 'Node.js', icon: SiNodedotjs },
-  { name: 'Python', icon: SiPython },
-  { name: 'Tailwind', icon: SiTailwindcss },
-  { name: 'MongoDB', icon: SiMongodb },
-  { name: 'PostgreSQL', icon: SiPostgresql },
-  { name: 'Git', icon: SiGit },
-  { name: 'Figma', icon: SiFigma },
-  { name: 'Docker', icon: SiDocker },
-];
-
-const Skills = () => {
+export default function Skills() {
   return (
-    <section id="skills" className="section-wrapper">
-      <div className="page-shell">
-        <div className="section-heading">
-          <span className="section-label">Capabilities</span>
-          <h2 className="section-title">Full-stack development with design thinking</h2>
-          <p className="section-subtitle">
-            I work across frontend, backend, and UX/UI to create complete solutions. Every project combines clean code with user-centered design to deliver polished results.
-          </p>
+    <section id="skills" className="py-24 md:py-32 bg-white relative">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        
+        <div className="text-center mb-20 md:mb-32">
+          <h2 className="text-5xl md:text-8xl font-black font-[Syne] text-black tracking-tight">
+            THE <span className="text-transparent" style={{ WebkitTextStroke: '2px black' }}>TOOLKIT</span>
+          </h2>
         </div>
 
-        <div className="skill-matrix">
-          {capabilityStacks.map((capability, idx) => (
-            <motion.div
-              key={capability.title}
-              initial={{ opacity: 0, y: 25 }}
+        {/* Minimalist Skills Matrix */}
+        <div className="flex flex-col border-t-[3px] border-black">
+          {skillCategories.map((group, i) => (
+            <motion.div 
+              key={group.category}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-120px' }}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="skill-card"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              className="flex flex-col md:flex-row py-8 md:py-12 border-b border-black/20 hover:border-black transition-colors"
             >
-              <span className="tag-badge">{capability.title}</span>
-              <p className="text-sm text-slate-600 dark:text-slate-300/80 mt-3">{capability.description}</p>
-              <div className="skill-list">
-                {capability.highlights.map((highlight) => (
-                  <span key={highlight} className="skill-chip">
-                    {highlight}
+              {/* Category Name */}
+              <div className="md:w-1/3 mb-6 md:mb-0 pr-8">
+                <h3 className="text-2xl md:text-3xl font-bold font-[Syne] text-black uppercase tracking-wide">
+                  {group.category}
+                </h3>
+              </div>
+              
+              {/* Skills Tags */}
+              <div className="md:w-2/3 flex flex-wrap gap-3 md:gap-4">
+                {group.items.map((item, j) => (
+                  <span 
+                    key={item} 
+                    className="text-lg md:text-xl font-medium font-[Space_Grotesk] px-5 py-2 border-2 border-black rounded-full hover:bg-[#bcfb00] hover:-translate-y-1 transition-all duration-300 text-black"
+                  >
+                    {item}
                   </span>
                 ))}
               </div>
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-120px' }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-14"
-        >
-          <div className="section-label" style={{ marginBottom: '1.5rem' }}>
-            Toolbelt
-          </div>
-          <div className="tech-marquee-wrapper">
-            <div className="tech-marquee">
-              {[...toolbelt, ...toolbelt].map((tool, idx) => (
-                <div key={`${tool.name}-${idx}`} className="tech-icon-item">
-                  {React.createElement(tool.icon, { size: 32 })}
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
+        
       </div>
     </section>
   );
-};
-
-export default Skills;
+}

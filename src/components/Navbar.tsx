@@ -1,92 +1,62 @@
-"use client";
+'use client';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FiArrowRight } from 'react-icons/fi';
 
-import { useState, useEffect, useMemo } from 'react';
-import { motion } from 'framer-motion';
+const navItems = [
+  { label: 'Home', href: '#home' },
+  { label: 'Capabilities', href: '#capabilities' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Contact', href: '#contact' },
+];
 
-const Navbar: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
-
-  const sections = useMemo(() => ['home', 'about', 'skills', 'projects', 'contact'], []);
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-    
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [mounted]);
-
-  useEffect(() => {
-    if (!mounted) return;
-    
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        rootMargin: '-45% 0px -45% 0px',
-        threshold: 0.1,
-      }
-    );
-
-    sections.forEach((sectionId) => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        observer.observe(element);
-      }
-    });
-
-    return () => observer.disconnect();
-  }, [mounted, sections]);
+  }, []);
 
   return (
-    <div className="nav-shell">
-      <motion.nav
-        initial={{ y: -40, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className={`nav-inner ${isScrolled ? 'outline-accent' : ''}`}
-      >
-        <div className="nav-brand">
-          <span className="availability-dot" aria-hidden="true"></span>
-          <div>
-            <div>Brian Ogero</div>
-            <span>Full-Stack Developer</span>
-          </div>
-        </div>
-
-        <div className="nav-links">
-          {sections.map((section) => (
-            <button
-              key={section}
-              onClick={() => {
-                const element = document.getElementById(section);
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-              }}
-              className={`nav-link ${activeSection === section ? 'active' : ''}`}
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </button>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'}`}>
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+        <Link href="#home" className="text-2xl font-black font-[Syne] tracking-tight text-black uppercase flex items-center gap-2">
+          <div className="w-2 h-2 rounded-full bg-[#bcfb00]"></div>
+          OGERO
+        </Link>
+        <div className="hidden md:flex items-center gap-8">
+          {navItems.map(item => (
+            <Link key={item.label} href={item.href} className="text-sm font-semibold text-gray-800 hover:text-[#bcfb00] transition-colors">
+              {item.label}
+            </Link>
           ))}
         </div>
-
-      </motion.nav>
-    </div>
+        <div className="hidden md:flex">
+          <a href="#contact" className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border-2 border-black text-black font-semibold hover:bg-black hover:text-white transition-all text-sm">
+            <FiArrowRight /> Start Project
+          </a>
+        </div>
+        <button className="md:hidden flex flex-col gap-1.5 z-50" onClick={() => setMobileOpen(!mobileOpen)}>
+          <span className={`w-6 h-0.5 bg-black transition-all ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`w-6 h-0.5 bg-black transition-all ${mobileOpen ? 'opacity-0' : ''}`} />
+          <span className={`w-6 h-0.5 bg-black transition-all ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+        </button>
+      </div>
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="absolute top-full left-0 w-full bg-white shadow-lg py-8 flex flex-col items-center gap-6 md:hidden">
+            {navItems.map(item => (
+              <Link key={item.label} href={item.href} onClick={() => setMobileOpen(false)} className="text-xl font-bold text-black hover:text-[#bcfb00]">
+                {item.label}
+              </Link>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
   );
-};
-
-export default Navbar;
+}
