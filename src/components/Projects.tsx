@@ -10,7 +10,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-[#0a0a0a] text-white py-32 rounded-t-[3rem] -mt-10 relative z-20">
+    <section id="projects" className="bg-[#0a0a0a] text-white py-32 rounded-t-[3rem] -mt-10 relative z-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
           <div>

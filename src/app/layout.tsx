@@ -56,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} ${syne.variable} overflow-x-hidden w-full`}
         style={{ fontFamily: 'var(--font-inter, sans-serif)' }}
