@@ -77,7 +77,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl lg:text-[100px] font-black font-[Syne] leading-[1.05] tracking-tight text-black mb-8"
           >
-            I'M <motion.span whileHover={{ scale: 1.05, rotate: 0 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="text-[#bcfb00] bg-black px-2 md:px-4 rounded-xl inline-block -rotate-2 cursor-pointer origin-bottom-left w-[240px] md:w-[500px] text-center max-w-full">{scrambledName1}</motion.span><br/>
+            <motion.span whileHover={{ scale: 1.05, rotate: 0 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="text-[#bcfb00] bg-black px-2 md:px-4 rounded-xl inline-block -rotate-2 cursor-pointer origin-bottom-left w-[240px] md:w-[500px] text-center max-w-full">{scrambledName1}</motion.span><br/>
             <span className="text-transparent" style={{ WebkitTextStroke: '2px black' }}>{scrambledName2}</span>
           </motion.h1>
 
@@ -86,8 +86,28 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-start sm:items-center gap-8 pl-2 border-l-4 border-[#bcfb00]"
           >
             <p className="text-gray-800 font-medium max-w-xl text-lg leading-relaxed">
-              Crafting secure, AI-driven applications. I build enterprise-grade systems bridging the gap between innovative app/web development and zero-trust cybersecurity.
+              I help engineering teams build secure, scalable applications and eliminate zero-day vulnerabilities without slowing down shipping velocity.
             </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.7 }}
+            className="mt-8 flex flex-wrap gap-4 md:gap-8"
+          >
+            <div className="flex flex-col">
+              <span className="text-2xl font-black font-[Syne] text-black">100%</span>
+              <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Secure by Design</span>
+            </div>
+            <div className="w-px bg-black/10 hidden md:block"></div>
+            <div className="flex flex-col">
+              <span className="text-2xl font-black font-[Syne] text-black">99.9%</span>
+              <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Uptime Architectures</span>
+            </div>
+            <div className="w-px bg-black/10 hidden md:block"></div>
+            <div className="flex flex-col">
+              <span className="text-2xl font-black font-[Syne] text-black">Fast</span>
+              <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Shipping Velocity</span>
+            </div>
           </motion.div>
 
           <motion.div 
@@ -101,7 +121,7 @@ export default function Hero() {
               href="#projects" 
               className="inline-flex items-center gap-3 px-8 py-4 rounded-full border-2 border-black text-black font-bold hover:bg-black hover:text-[#bcfb00] bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-none text-lg"
             >
-              View My Work <FiArrowRight size={20} />
+              Explore Case Studies <FiArrowRight size={20} />
             </motion.a>
             <motion.a 
               whileHover={{ scale: 1.05, backgroundColor: 'rgba(0,0,0,0.05)' }}
