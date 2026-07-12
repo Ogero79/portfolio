@@ -58,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} ${syne.variable}`}
+        className={`${inter.variable} ${spaceGrotesk.variable} ${syne.variable} overflow-x-hidden w-full`}
         style={{ fontFamily: 'var(--font-inter, sans-serif)' }}
       >
         <div id="main">{children}</div>

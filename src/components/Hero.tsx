@@ -77,7 +77,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl lg:text-[100px] font-black font-[Syne] leading-[1.05] tracking-tight text-black mb-8"
           >
-            I'M <motion.span whileHover={{ scale: 1.05, rotate: 0 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="text-[#bcfb00] bg-black px-4 rounded-xl inline-block -rotate-2 cursor-pointer origin-bottom-left inline-block w-[280px] md:w-[500px] text-center">{scrambledName1}</motion.span><br/>
+            I'M <motion.span whileHover={{ scale: 1.05, rotate: 0 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} className="text-[#bcfb00] bg-black px-2 md:px-4 rounded-xl inline-block -rotate-2 cursor-pointer origin-bottom-left w-[240px] md:w-[500px] text-center max-w-full">{scrambledName1}</motion.span><br/>
             <span className="text-transparent" style={{ WebkitTextStroke: '2px black' }}>{scrambledName2}</span>
           </motion.h1>
 
