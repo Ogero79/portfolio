@@ -48,7 +48,7 @@ export default function Capabilities() {
   return (
     <section id="capabilities" className="py-24 md:py-32 bg-white relative border-y-2 border-black">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <h2 className="text-5xl md:text-7xl font-black font-[Syne] mb-16 tracking-tight">
+        <h2 className="text-4xl sm:text-5xl md:text-7xl font-black font-[Syne] mb-16 tracking-tight break-words">
           Capabilities<span className="text-[#bcfb00]">.</span>
         </h2>
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">

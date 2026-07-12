@@ -54,6 +54,9 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
+            <a href="#contact" onClick={() => setMobileOpen(false)} className="mt-4 inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-black text-black font-bold hover:bg-black hover:text-[#bcfb00] transition-all text-lg">
+              <FiArrowRight /> Start Project
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
