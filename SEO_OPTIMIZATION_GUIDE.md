@@ -54,7 +54,7 @@ Create technical blog posts about:
 - "Building a Portfolio with Next.js 15"
 - "Full-Stack Development Best Practices"
 - "Web Security Tips for Developers"
-- "My Journey in Computer Security & Forensics"
+- "My Journey Through Computer Security & Forensics"
 
 **Why?** Google loves fresh, quality content. Aim for 1-2 posts per month.
 
@@ -63,7 +63,7 @@ Add more text to your pages with natural keyword usage:
 - "Full Stack Developer in Kenya"
 - "React and Next.js Developer"
 - "Web Security Expert"
-- "Computer Science Student at Kabarak University"
+- "Computer Security and Forensics Graduate from Kabarak University"
 
 ---
 
@@ -87,7 +87,7 @@ Add more text to your pages with natural keyword usage:
 
 4. **Academic/University**
    - Ask Kabarak University to link to your portfolio
-   - Student directory or alumni page
+   - Alumni directory or alumni profile page
 
 5. **Submit to Directories**
    - https://www.producthunt.com (launch your portfolio)
@@ -205,12 +205,12 @@ Create `src/app/layout.tsx` and add schema markup:
 1. "Brian Ogero"
 2. "Full Stack Developer Kenya"
 3. "React Developer Kenya"
-4. "Web Developer Kabarak University"
-5. "Computer Security Student Portfolio"
+4. "Web Developer Kabarak University Alumni"
+5. "Computer Security Professional Portfolio"
 
 ### Long-tail Keywords
 1. "Full stack developer specializing in React and Next.js"
-2. "Computer Security and Forensics student portfolio"
+2. "Computer Security and Forensics graduate portfolio"
 3. "Hire React developer in Kenya"
 4. "Next.js developer for hire"
 5. "Web security developer portfolio"
