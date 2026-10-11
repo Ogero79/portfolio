@@ -69,7 +69,7 @@ export default function Hero() {
         <div className="w-full lg:pl-32 max-w-5xl mx-auto lg:mx-0">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 }} className="mb-6">
             <span className="bg-black text-[#bcfb00] px-4 py-1.5 rounded-full text-sm font-bold tracking-wide border border-[#bcfb00]/30 shadow-[0_0_20px_rgba(188,251,0,0.4)]">
-              Software Engineer & Security Researcher
+              Software Engineer & Cybersecurity Specialist
             </span>
           </motion.div>
           
